@@ -14,18 +14,12 @@ namespace NHibernate.Test.NHSpecificTest.GH3185
 			{
 				map.NotNullable(false);
 				map.NotFound(NotFoundMode.Ignore);
-				map.Lazy(LazyRelation.Proxy);
-				map.Cascade(Mapping.ByCode.Cascade.Persist);
-				map.ForeignKey("none");
 			});
 
 			ManyToOne(x => x.Category, map =>
 			{
 				map.NotNullable(false);
 				map.NotFound(NotFoundMode.Ignore);
-				map.Lazy(LazyRelation.Proxy);
-				map.Cascade(Mapping.ByCode.Cascade.Persist);
-				map.ForeignKey("none");
 			});
 		}
 	}
